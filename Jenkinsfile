@@ -11,7 +11,7 @@ node{
 
   pipeline.deploy(stagedProject)
 
-  pipeline.approve(stagedProject)
+  pipeline.approveRelease(stagedProject)
 
   pipeline.release(stagedProject)
 }
