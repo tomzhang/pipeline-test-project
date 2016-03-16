@@ -9,15 +9,15 @@
     <version>1.3.3.RELEASE</version>
   </parent>
   <groupId>io.fabric8</groupId>
-  <artifactId>pipeline-test-downstream-project</artifactId>
+  <artifactId>pipeline-test-downstream</artifactId>
   <version>0.0.99-SNAPSHOT</version>
-  <name>pipeline-test-downstream-project</name>
+  <name>pipeline-test-downstream</name>
   <description>Demo project for Spring Boot</description>
 
   <scm>
-    <connection>scm:git:git@github.com:fabric8io/pipeline-test-downstream-project.git</connection>
-    <developerConnection>scm:git:git@github.com:fabric8io/pipeline-test-downstream-project.git</developerConnection>
-    <url>http://github.com/fabric8io/pipeline-test-downstream-project</url>
+    <connection>scm:git:git@github.com:fabric8io/pipeline-test-downstream.git</connection>
+    <developerConnection>scm:git:git@github.com:fabric8io/pipeline-test-downstream.git</developerConnection>
+    <url>http://github.com/fabric8io/pipeline-test-downstream</url>
   </scm>
 
   <properties>
@@ -28,7 +28,7 @@
     <docker.port.container.jolokia>8778</docker.port.container.jolokia>
     <fabric8.iconRef>icons/camel</fabric8.iconRef>
     <fabric8.service.containerPort>8080</fabric8.service.containerPort>
-    <fabric8.service.name>pipeline-test-downstream-project</fabric8.service.name>
+    <fabric8.service.name>pipeline-test-downstream</fabric8.service.name>
     <fabric8.service.port>80</fabric8.service.port>
 
     <docker.maven.plugin.version>0.14.1</docker.maven.plugin.version>
