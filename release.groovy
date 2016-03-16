@@ -23,7 +23,7 @@ def deploy(project){
   deployProject{
     stagedProject = project
     resourceLocation = 'target/classes/kubernetes.json'
-    environment = 'fabric8-preprod'
+    environment = 'pipeline-test-downstream-staging'
   }
 }
 
@@ -33,7 +33,7 @@ def approve(project){
     room = null
     version = releaseVersion
     console = fabric8Console
-    environment = 'fabric8-preprod'
+    environment = 'pipeline-test-downstream-staging'
   }
 }
 
