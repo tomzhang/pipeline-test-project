@@ -8,10 +8,11 @@ node{
   pipeline.updateDependencies('http://central.maven.org/maven2/')
 
   def stagedProject = pipeline.stage()
-
+echo "1 ${stagedProject}"
   pipeline.deploy(stagedProject)
-
+echo "2 ${stagedProject}"
   pipeline.approve(stagedProject)
-
+echo "3 ${stagedProject}"
   pipeline.release(stagedProject)
+echo "4 ${stagedProject}"
 }
