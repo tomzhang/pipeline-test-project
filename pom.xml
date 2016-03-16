@@ -23,7 +23,8 @@
   <properties>
     <docker.assemblyDescriptorRef>artifact</docker.assemblyDescriptorRef>
     <docker.from>docker.io/fabric8/java-jboss-openjdk8-jdk:1.0.10</docker.from>
-    <docker.image>fabric8/${project.artifactId}:${project.version}</docker.image>
+    <fabric8.dockerUser>fabric8/</fabric8.dockerUser>
+    <docker.image>${fabric8.dockerUser}/${project.artifactId}:${project.version}</docker.image>
     <docker.port.container.http>8080</docker.port.container.http>
     <docker.port.container.jolokia>8778</docker.port.container.jolokia>
     <fabric8.iconRef>icons/camel</fabric8.iconRef>
@@ -31,12 +32,12 @@
     <fabric8.service.name>pipeline-test-downstream</fabric8.service.name>
     <fabric8.service.port>80</fabric8.service.port>
 
-    <docker.maven.plugin.version>0.14.1</docker.maven.plugin.version>
+    <docker.maven.plugin.version>0.14.2</docker.maven.plugin.version>
     <forge.version>2.2.130</forge.version>
     <java.version>1.8</java.version>
     <maven.enforcer.plugin.version>1.4</maven.enforcer.plugin.version>
 
-    <pipeline.test.project.version>0.0.1</pipeline.test.project.version>
+    <pipeline.test.project.version>0.0.41</pipeline.test.project.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
