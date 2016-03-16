@@ -23,17 +23,19 @@ def deploy(project){
   deployProject{
     stagedProject = project
     resourceLocation = 'target/classes/kubernetes.json'
-    environment = 'fabric8-preprod'
+    environment = 'fabric8'
   }
 }
 
 def approve(project){
+  echo "a. ${project}"
   def releaseVersion = project[1]
+  echo "b. ${releaseVersion}"
   approve{
     room = null
     version = releaseVersion
     console = fabric8Console
-    environment = 'fabric8-preprod'
+    environment = 'fabric8'
   }
 }
 
