@@ -1,0 +1,13 @@
+---
+buildName: "pipeline-test-downstream-project"
+codeReview: false
+links:
+  Git: "https://github.com/fabric8io/pipeline-test-downstream-project.git"
+  Job: "http://172.30.239.254:80/job/pipeline-test-downstream-project"
+  Production: "http://172.30.108.248:80/kubernetes/pods?namespace=pipeline-test-downstream-project-prod"
+  Staging: "http://172.30.108.248:80/kubernetes/pods?namespace=pipeline-test-downstream-project-staging"
+  Testing: "http://172.30.108.248:80/kubernetes/pods?namespace=pipeline-test-downstream-project-testing"
+environments:
+  Testing: "pipeline-test-downstream-project-testing"
+  Staging: "pipeline-test-downstream-project-staging"
+  Production: "pipeline-test-downstream-project-prod"
