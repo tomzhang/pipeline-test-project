@@ -44,11 +44,11 @@ def release(project){
     helmPush = false
     groupId = 'io.fabric8'
     githubOrganisation = 'fabric8io'
-    artifactIdToWatchInCentral = 'pipeline-test-downstream-project'
+    artifactIdToWatchInCentral = 'pipeline-test-downstream'
     artifactExtensionToWatchInCentral = 'jar'
     promoteToDockerRegistry = 'docker.io'
     dockerOrganisation = 'fabric8'
-    imagesToPromoteToDockerHub = ['pipeline-test-downstream-project']
+    imagesToPromoteToDockerHub = ['pipeline-test-downstream']
     extraImagesToTag = null
   }
 }

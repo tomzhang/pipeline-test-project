@@ -1,8 +1,0 @@
----
-buildName: "pipeline-test-downstream"
-codeReview: false
-links:
-  Git: "https://github.com/fabric8io/pipeline-test-downstream.git"
-  Staging: "http://172.30.126.183:80/kubernetes/pods?namespace=pipeline-test-downstream-staging"
-environments:
-  Staging: "pipeline-test-downstream-staging"
