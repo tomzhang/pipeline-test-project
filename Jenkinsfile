@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 node{
   checkout scm
-  sh "git remote set-url origin git@github.com:fabric8io/pipeline-test-downstream.git"
+  sh "git remote set-url origin git@github.com:fabric8io/pipeline-test-project.git"
 
   def pipeline = load 'release.groovy'
 
