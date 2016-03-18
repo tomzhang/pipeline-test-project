@@ -14,6 +14,31 @@
   <name>pipeline-test-project</name>
   <description>Demo project for Spring Boot</description>
 
+  <url>http://fabric8.io</url>
+
+  <organization>
+    <name>Red Hat</name>
+    <url>http://redhat.com</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <!-- including A developer as it's required by the maven poms going into central -->
+  <developers>
+    <developer>
+      <id>geeks</id>
+      <name>Fabric8 Development Team</name>
+      <organization>fabric8</organization>
+      <organizationUrl>http://fabric8.io/</organizationUrl>
+    </developer>
+  </developers>
+
   <scm>
     <connection>scm:git:git@github.com:fabric8io/pipeline-test-project.git</connection>
     <developerConnection>scm:git:git@github.com:fabric8io/pipeline-test-project.git</developerConnection>
