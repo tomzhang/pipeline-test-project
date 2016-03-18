@@ -1,11 +1,11 @@
 #!/usr/bin/groovy
 node{
   checkout scm
-  sh "git remote set-url origin git@github.com:fabric8io/pipeline-test-downstream.git"
+  sh "git remote set-url origin git@github.com:fabric8io/pipeline-test-project.git"
 
   def pipeline = load 'release.groovy'
 
-  pipeline.updateDependencies('http://central.maven.org/maven2/')
+  def prId = pipeline.updateDependencies('http://central.maven.org/maven2/')
 
   def stagedProject = pipeline.stage()
 
@@ -14,4 +14,6 @@ node{
   pipeline.approveRelease(stagedProject)
 
   pipeline.release(stagedProject)
+
+  pipeline.mergePullRequest(prId)
 }
