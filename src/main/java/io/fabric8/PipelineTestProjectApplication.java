@@ -13,7 +13,7 @@ public class PipelineTestProjectApplication {
 
 	@RequestMapping("/")
 	String home() {
-			return "Hello World!";
+			return WebPageMessageGenerator.getWelcomeMessage();
 	}
 
 	public static void main(String[] args) {
