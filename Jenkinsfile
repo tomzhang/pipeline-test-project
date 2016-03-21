@@ -5,7 +5,7 @@ node{
 
   def pipeline = load 'release.groovy'
 
-  pipeline.updateDependencies('http://central.maven.org/maven2/')
+  def prId = pipeline.updateDependencies('http://central.maven.org/maven2/')
 
   def stagedProject = pipeline.stage()
 
@@ -14,4 +14,5 @@ node{
   pipeline.approveRelease(stagedProject)
 
   pipeline.release(stagedProject)
+  pipeline.mergePullRequest(prId)
 }

@@ -53,4 +53,11 @@ def release(project){
   }
 }
 
+def mergePullRequest(prId){
+  mergeAndWaitForPullRequest{
+    project = 'fabric8io/pipeline-test-project'
+    pullRequestId = prId
+  }
+
+}
 return this;
