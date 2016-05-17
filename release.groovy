@@ -1,7 +1,15 @@
 #!/usr/bin/groovy
-imagesBuiltByPipline = ['pipeline-test-project']
-externalImages = ['pipeline-test-external-image']
-repo = 'fabric8io/pipeline-test-project'
+def imagesBuiltByPipline() {
+  return ['pipeline-test-project']
+}
+
+def externalImages(){
+  return ['pipeline-test-external-image']
+}
+
+def repo(){
+ return 'fabric8io/pipeline-test-project'
+}
 
 def updateDependencies(source){
 
@@ -12,15 +20,15 @@ def updateDependencies(source){
   updatePropertyVersion{
     updates = properties
     repository = source
-    project = repo
+    project = repo()
   }
 }
 
 def stage(){
   return stageProject{
-    project = repo
+    project = repo()
     useGitTagForNextVersion = true
-    extraImagesToStage = externalImages
+    extraImagesToStage = externalImages()
   }
 }
 
@@ -53,14 +61,14 @@ def release(project){
     artifactExtensionToWatchInCentral = 'jar'
     promoteToDockerRegistry = 'docker.io'
     dockerOrganisation = 'fabric8'
-    imagesToPromoteToDockerHub = imagesBuiltByPipline
-    extraImagesToTag = externalImages
+    imagesToPromoteToDockerHub = imagesBuiltByPipline()
+    extraImagesToTag = externalImages()
   }
 }
 
 def mergePullRequest(prId){
   mergeAndWaitForPullRequest{
-    project = repo
+    project = repo()
     pullRequestId = prId
   }
 
