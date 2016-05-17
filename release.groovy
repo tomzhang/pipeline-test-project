@@ -1,7 +1,15 @@
 #!/usr/bin/groovy
-imagesBuiltByPipline = ['pipeline-test-project']
-externalImages = ['pipeline-test-external-image']
-repo = 'fabric8io/pipeline-test-project'
+def imagesBuiltByPipline() {
+  return ['pipeline-test-project']
+}
+
+def externalImages(){
+  return ['pipeline-test-external-image']
+}
+
+def repo(){
+ return 'fabric8io/pipeline-test-project'
+}
 
 def updateDependencies(source){
 
