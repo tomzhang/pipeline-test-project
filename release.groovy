@@ -24,6 +24,13 @@ def updateDependencies(source){
   }
 }
 
+def pushDependencyUpdates(newVersion){
+  def parentPomProjects = ['fabric8-quickstarts/funktion-nodejs-example','fabric8-quickstarts/funktion-kotlin-example','fabric8-quickstarts/funktion-java-example','fabric8-quickstarts/funktion-groovy-example']
+  pushParentPomVersionChangePR{
+    projects = parentPomProjects
+    version = newVersion
+  }
+}
 def stage(){
   return stageProject{
     project = repo()
